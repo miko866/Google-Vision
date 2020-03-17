@@ -1,0 +1,22 @@
+/*
+* General classes scss
+*/
+
+.container {
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 2em;
+}
+
+.hover {
+  cursor: pointer;
+  transition: $transition;
+}
+.hover:hover {
+  color: $color-orange !important;
+}
+
+.a-link-icon {
+  display: flex;
+  align-items: flex-start;
+}
