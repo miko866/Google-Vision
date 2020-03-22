@@ -1,4 +1,3 @@
-
 const cors = require('cors');
 const helmet = require('helmet');
 const express = require('express');
@@ -18,6 +17,7 @@ app.use(cors());
 // Allow OPTIONS for all resources
 app.options('*', cors());
 
+// Routes
 require('./routes/Upload')(app);
 
 

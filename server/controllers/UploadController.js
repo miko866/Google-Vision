@@ -1,16 +1,10 @@
 const fs = require('fs');
-const dotenv = require('dotenv');
 const vision = require('@google-cloud/vision');
 
-dotenv.config();
 
 module.exports = {
 	async upload (req, res) {
 		try {
-			//! Dont Remove It yet
-			console.log('FILE: ', req.file);
-			console.log('BODY DATA: ', req.body);
-
 			// Dir folder for save image
 			imageDir = `${process.cwd()}/image/`;
 
@@ -40,14 +34,13 @@ module.exports = {
 
 					console.log('Labels:');
 					labels.forEach(label => console.log(label));
-					// console.log(results);
 
+					// Send data to client
 					res.status(200).json({ data: labels });
 
 					// Remove original image from /temps/logo
 					setTimeout(() => {
 						fs.unlink(req.file.path, () => {
-							// res.json({ file: `./src/temps/logo/${req.file.filename}` });
 						});
 					}, 1000);
 				})

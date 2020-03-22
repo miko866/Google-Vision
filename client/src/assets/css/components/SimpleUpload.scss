@@ -1,0 +1,36 @@
+/*
+* SimpleUpload component CSS
+*/
+
+@import './src/assets/css/App.scss';
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+}
+
+.file-cta {
+  width: 15em;
+  display: flex;
+  align-items: center;
+  background-color: #42a5f5;
+  padding: 2em;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  cursor: pointer;
+}
+
+.file-name {
+  display: flex;
+  width: 15em;
+  justify-content: center;
+  background-color: #e0e0e0;
+  border-bottom-right-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  padding-bottom: 0.7em;
+}

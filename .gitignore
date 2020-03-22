@@ -100,4 +100,4 @@ setup/proxy/certbot
 #Api key
 server/APIKey.json
 
-server/image
+
